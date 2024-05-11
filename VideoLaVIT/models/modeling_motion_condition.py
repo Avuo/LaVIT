@@ -21,7 +21,7 @@ class LayerNorm(nn.LayerNorm):
 try:
     from apex.normalization import FusedLayerNorm
 except:
-    FusedLayerNorm = LayerNorm
+    FusedLayerNorm = nn.LayerNorm
     print("Please 'pip install apex'")
 
 
